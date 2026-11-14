@@ -10,7 +10,7 @@ public abstract class Player
     
     static Scanner sc = new Scanner(System.in);
 
-        public void player(String name)
+        public Player(String name)
         {
             this.name=name;
             this.position=0;
@@ -42,15 +42,15 @@ public abstract class Player
 
         public int move(int dice)
         {
-         position=position+dice ;
-    
-        if(position>100)
-        {
-            System.out.println("sorry the player cannot move more than 100");
-            return position;
-        }
+            
+            if(position+dice>100)
+                {
+                    System.out.println("sorry the player cannot move more than 100");
+                    return position;
+                }
          else
-        {
+            {
+            position=position+dice ;
             return position;
         }
     
@@ -67,6 +67,10 @@ public abstract class Player
 
 class HumanPlayer extends Player
 {
+    public HumanPlayer(String name)
+    {
+        super(name);
+    }
     @Override 
     public void WaitForRoll()
     {
@@ -78,6 +82,10 @@ class HumanPlayer extends Player
 
 class BotPlayer extends Player
 {
+    public BotPlayer(String name)
+    {
+        super(name);
+    }
     @Override 
     public void WaitForRoll()
     {
