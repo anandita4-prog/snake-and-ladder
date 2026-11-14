@@ -71,7 +71,7 @@ class HumanPlayer extends Player
     {
         super(name);
     }
-    @Override 
+     
     public void WaitForRoll()
     {
         System.out.println("Press enter to roll the dice");
@@ -86,7 +86,7 @@ class BotPlayer extends Player
     {
         super(name);
     }
-    @Override 
+    
     public void WaitForRoll()
     {
         System.out.println("Bot is rolling the dice automatically...");
