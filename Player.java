@@ -9,7 +9,74 @@ public abstract class Player
     int botPosition = 0;
     String name ;
     int dice;
+    int newPosition;
+    static Scanner sc = new Scanner(System.in);
+    
+    
+        public int moveTo(int position) // for testing
+        {
+         newPosition=position ;
+    
+        if(newPosition>100)
+        {
+            System.out.println("sorry the player cannot move more than 100");
+            return position;
+        }
+         else
+        {
+            return newPosition;
+        }
+    
+        }
+        public int move(int position , int dice)
+        {
+         newPosition=position+dice ;
+    
+        if(newPosition>100)
+        {
+            System.out.println("sorry the player cannot move more than 100");
+            return position;
+        }
+         else
+         {
+            return newPosition;
+        }
+    
+        }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     // move human player 
 //    public void player()
 //    {
@@ -74,6 +141,8 @@ public abstract class Player
 
 
 
+    
+
 
 
 
@@ -100,7 +169,7 @@ public abstract class Player
         name="human";
     }
 
-    static Scanner sc = new Scanner(System.in);
+    
     public static void main(String[] args)
     {
         // boolean gameover = false
