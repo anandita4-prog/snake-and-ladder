@@ -40,13 +40,13 @@ public abstract class Player
         }
 
 
-        public int move(int dice)
+        public int move(int dice) throws InvalidMoveException
         {
             
             if(position+dice>100)
                 {
-                    System.out.println("sorry the player cannot move more than 100");
-                    return position;
+                    throw new InvalidMoveException();
+                    
                 }
          else
             {
