@@ -1,4 +1,3 @@
-//MEMBER 2 SUJAN HALDER
 // import java.util.Random;
 import java.util.Scanner;
 public abstract class Player
@@ -9,7 +8,7 @@ public abstract class Player
     private String name ;
     // int newPosition;
     
-    static Scanner sc = new Scanner(System.in);
+    
 
         public Player(String name)
         {
@@ -54,11 +53,11 @@ public abstract class Player
             position=position+dice ;
             return position;
         }
-    
+        
         }
-
-        public abstract void WaitForRoll();
-     
+    public abstract void waitForRoll();
+        
+        
 
 
 
@@ -68,12 +67,14 @@ public abstract class Player
 
 class HumanPlayer extends Player
 {
-    public HumanPlayer(String name)
+    private Scanner sc;
+    public HumanPlayer(String name , Scanner sc)
     {
         super(name);
+        this.sc = sc;
     }
      
-    public void WaitForRoll()
+    public void waitForRoll()
     {
         System.out.println("Press enter to roll the dice");
         sc.nextLine();
@@ -86,9 +87,10 @@ class BotPlayer extends Player
     public BotPlayer(String name)
     {
         super(name);
+        
     }
     
-    public void WaitForRoll()
+    public void waitForRoll()
     {
         System.out.println("Bot is rolling the dice automatically...");
     }
