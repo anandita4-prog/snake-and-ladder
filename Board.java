@@ -1,4 +1,4 @@
-//Person 3: Board
+//MEMBER 3 KUMUD YADU 
 public class Board {
 
     private int[] snakeHeads;
