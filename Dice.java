@@ -1,3 +1,4 @@
+//MEMBER 1 ANANDITA MITRA 
 public class Dice {
     private int sides;
     private int nextRoll;
