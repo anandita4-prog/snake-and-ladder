@@ -1,3 +1,4 @@
+//MEMBER 2 SUJAN HALDAR 
 // import java.util.Random;
 import java.util.Scanner;
 public abstract class Player
